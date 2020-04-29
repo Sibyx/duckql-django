@@ -177,3 +177,8 @@ class Schema:
     @property
     def types(self) -> List[str]:
         return self._types
+
+
+__all__ = [
+    'Schema'
+]

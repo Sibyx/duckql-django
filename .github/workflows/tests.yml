@@ -24,9 +24,9 @@ jobs:
     - name: Lint with flake8
       run: |
          poetry run pytest . -v --flake8
-    - name: Test with pytest
-      run: |
-        poetry run pytest . -v
+#    - name: Test with pytest
+#      run: |
+#        poetry run pytest . -v
     - name: Coverage with pytest
       run: |
         poetry run pytest . --cov --cov-report xml

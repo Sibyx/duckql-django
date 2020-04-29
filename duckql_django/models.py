@@ -10,3 +10,8 @@ class BaseReportConfig:
 
 class ReportableModel:
     ReportConfig = BaseReportConfig()
+
+
+__all__ = [
+    'ReportableModel'
+]

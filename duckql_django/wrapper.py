@@ -38,3 +38,8 @@ class QueryWrapper:
         )
 
         return self._execute_query(query)[0].get('count')
+
+
+__all__ = [
+    'QueryWrapper'
+]
