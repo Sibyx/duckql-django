@@ -10,7 +10,7 @@ def read_files(files):
 
 
 meta = {}
-with open('duckql-django/version.py') as f:
+with open('duckql_django/version.py') as f:
     exec(f.read(), meta)
 
 setup(
@@ -20,9 +20,9 @@ setup(
         'duckql_django'
     ],
     install_requires=[
-        'pydantic==1.*',
-        'click==7.*',
-        'typing-extensions'
+        'django>=2',
+        'duckql>=0.2.0',
+        'django-enum-choices>=2.1.2'
     ],
     url='https://github.com/Sibyx/duckql-django',
     license='MIT',
@@ -33,13 +33,17 @@ setup(
     long_description_content_type='text/markdown',
     classifiers=[
         # As from https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: Implementation :: PyPy',
+        'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Topic :: Database',
