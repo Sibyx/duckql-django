@@ -1,4 +1,4 @@
-# duckql-django
+# duckql-django 🐥
 
 backboneQL bindings into [Django](https://www.djangoproject.com/) ORM and permissions system. This package suppose
 to provide:

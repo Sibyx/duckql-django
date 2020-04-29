@@ -1,0 +1,25 @@
+# Project information
+site_name: duckQL Django
+site_description: 'duckQL Django bindings'
+site_author: 'Jakub Dubec'
+site_url: 'https://sibyx.github.io/duckql-django/'
+
+# Navigation
+nav:
+  - Home: index.md
+
+# Repository
+repo_name: 'Sibyx/duckql-django'
+repo_url: 'https://github.com/Sibyx/duckql-django'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+
+# Extensions
+markdown_extensions:
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
