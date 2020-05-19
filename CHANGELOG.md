@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 : 2020-05-19
+
+- **Change**: Use inheritance instead of meta-classes in `ReportConfig` (temporary)
+
 ## 0.1.1 : 2020-04-29
 
 - **Change**: Shiny imports from main `duckql_django` module
