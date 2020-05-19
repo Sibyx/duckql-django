@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4 : 2020-05-19
+
+- **Fix**: Fixed invalid import
+
 ## 0.1.3 : 2020-05-19
 
 - **Fix**: Invalid typing in `BaseReportConfig`
