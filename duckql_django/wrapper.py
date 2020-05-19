@@ -12,6 +12,7 @@ class QueryWrapper:
 
     @classmethod
     def from_dict(cls, payload: Dict):
+        # So dirty, so nasty, so sad
         return QueryWrapper(json.dumps(payload))
 
     @staticmethod

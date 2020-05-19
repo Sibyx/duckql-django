@@ -1,17 +1,18 @@
-from typing import List, Union
+from typing import List, Union, Dict, Callable
 
 
-class BaseReportConfig:
+class BaseReportConfig(object):
     is_reportable: bool = False
     fields: List[str] = []
-    exclude: List[str] = []
+    exclude: List[str] = [
+        'deleted_at',
+        'created_at',
+        'updated_at'
+    ]
     permission: Union[str, None] = None
-
-
-class ReportableModel:
-    ReportConfig = BaseReportConfig()
+    field_permissions: Dict[Union[str, Callable]] = {}
 
 
 __all__ = [
-    'ReportableModel'
+    'BaseReportConfig'
 ]
