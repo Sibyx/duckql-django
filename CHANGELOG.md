@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3 : 2020-05-19
+
+- **Fix**: Invalid typing in `BaseReportConfig`
+
 ## 0.1.2 : 2020-05-19
 
 - **Change**: Use inheritance instead of meta-classes in `ReportConfig` (temporary)

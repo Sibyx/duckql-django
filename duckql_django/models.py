@@ -10,7 +10,7 @@ class BaseReportConfig(object):
         'updated_at'
     ]
     permission: Union[str, None] = None
-    field_permissions: Dict[Union[str, Callable]] = {}
+    field_permissions: Dict[str, Union[str, Callable]] = {}
 
 
 __all__ = [
