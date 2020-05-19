@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "duckql-django"
-version = "0.1.4"
+version = "0.1.5"
 description = "backboneQL Django integration"
 authors = ["Jakub Dubec <jakub.dubec@gmail.com>"]
 license = "MIT"

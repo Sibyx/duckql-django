@@ -1,7 +1,7 @@
-from typing import Tuple, Dict, List
+from typing import Tuple, Dict, List, Type
 
 from django.db.models import UUIDField, CharField, TextField, BigIntegerField, PositiveIntegerField, DecimalField, \
-    IntegerField, DateTimeField, DateField, Model, ForeignKey
+    IntegerField, DateTimeField, DateField, ForeignKey
 from django_enum_choices.fields import EnumChoiceField
 from duckql import Query
 
@@ -97,9 +97,10 @@ class Schema:
         }
     }
 
-    def __init__(self):
+    def __init__(self, base_model: Type):
         self._mapping: Dict = {}
         self._types: List[str] = []
+        self._base_model = base_model
 
         self.recreate()
 
@@ -107,7 +108,7 @@ class Schema:
         mapping = {}
         types = []
 
-        for model in Model.__subclasses__():
+        for model in self._base_model.__subclasses__():
             if hasattr(model, 'ReportConfig'):
                 conf = getattr(model, 'ReportConfig')
 
