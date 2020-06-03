@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0 : 2020-06-03
+
+- **Feature**: Permission checkers in `Schema`
+
 ## 0.1.5 : 2020-05-19
 
 - **Change**: Pass base model in Schema `__init__`

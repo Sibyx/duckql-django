@@ -1,9 +1,12 @@
 from typing import Tuple, Dict, List, Type
 
+from django.contrib.auth.models import PermissionsMixin
 from django.db.models import UUIDField, CharField, TextField, BigIntegerField, PositiveIntegerField, DecimalField, \
     IntegerField, DateTimeField, DateField, ForeignKey
 from django_enum_choices.fields import EnumChoiceField
 from duckql import Query
+
+from duckql_django import BaseReportConfig
 
 
 class Schema:
@@ -97,12 +100,32 @@ class Schema:
         }
     }
 
-    def __init__(self, base_model: Type):
+    def __init__(self, base_model: Type, user: PermissionsMixin = None):
         self._mapping: Dict = {}
         self._types: List[str] = []
         self._base_model = base_model
+        self._user: PermissionsMixin = user
 
         self.recreate()
+
+    def _check_permissions_for_field(self, field: str, conf: BaseReportConfig) -> bool:
+        """
+        Default permission checker for fields
+        TODO: move this callable to Django settings
+        :param field:
+        :param conf:
+        :return:
+        """
+
+        if not self._user:
+            return True
+
+        if field not in conf.field_permissions.keys():
+            return True
+
+        # TODO: support for callable in field permissions
+
+        return self._user.has_perm(conf.field_permissions[field])
 
     def _create_mapping(self) -> Tuple[Dict, List[str]]:
         mapping = {}
@@ -110,9 +133,13 @@ class Schema:
 
         for model in self._base_model.__subclasses__():
             if hasattr(model, 'ReportConfig'):
-                conf = getattr(model, 'ReportConfig')
+                conf: BaseReportConfig = getattr(model, 'ReportConfig')
 
                 if not conf.is_reportable:
+                    continue
+
+                # TODO: create handle for custom permission checker
+                if self._user and conf.permission and not self._user.has_perm(conf.permission):
                     continue
 
                 model_meta = getattr(model, '_meta')
@@ -124,6 +151,11 @@ class Schema:
 
                 for field in model_meta.fields:
                     if not conf.fields or field.attname in model_meta.fields:
+
+                        # TODO: create handle for custom permission checker
+                        if not self._check_permissions_for_field(field, conf):
+                            continue
+
                         field_definition = {
                             'attribute': field.attname,
                             'type': field.__class__.__name__,
