@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0 : 2020-06-15
+
+- **Feature**: `PermissionsMixin` in `QueryWrapper` input
+- **Feature**: `available_columns` in `Schema`
+
 ## 0.2.0 : 2020-06-03
 
 - **Feature**: Permission checkers in `Schema`

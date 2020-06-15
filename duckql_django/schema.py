@@ -204,6 +204,20 @@ class Schema:
         return Query.schema()
 
     @property
+    def available_columns(self) -> Tuple[Tuple[str, str, str, str]]:
+        """
+        response tuple: entity, column, type, title
+        :return:
+        """
+        result = []
+        for entity, mapping in self._mapping.items():
+            for field in mapping.get('fields', []):
+                result.append(
+                    (str(entity), str(field['attribute']), str(field['type']), str(field['title']))
+                )
+        return tuple(result)
+
+    @property
     def mapping(self) -> Dict:
         return self._mapping
 
