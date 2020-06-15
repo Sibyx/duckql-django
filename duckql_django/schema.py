@@ -1,6 +1,5 @@
 from typing import Tuple, Dict, List, Type
 
-from django.contrib.auth.models import PermissionsMixin
 from django.db.models import UUIDField, CharField, TextField, BigIntegerField, PositiveIntegerField, DecimalField, \
     IntegerField, DateTimeField, DateField, ForeignKey
 from django_enum_choices.fields import EnumChoiceField
@@ -100,11 +99,11 @@ class Schema:
         }
     }
 
-    def __init__(self, base_model: Type, user: PermissionsMixin = None):
+    def __init__(self, base_model: Type, user=None):
         self._mapping: Dict = {}
         self._types: List[str] = []
         self._base_model = base_model
-        self._user: PermissionsMixin = user
+        self._user = user
 
         self.recreate()
 
