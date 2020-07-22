@@ -9,12 +9,12 @@ from . import Schema
 
 
 class QueryWrapper:
-    def __init__(self, query: str, base_model: Type, user = None):
+    def __init__(self, query: str, base_model: Type, user=None):
         self._query = Query.parse_raw(query)
         self._schema = Schema(base_model, user)
 
     @classmethod
-    def from_dict(cls, payload: Dict, base_model: Type, user = None):
+    def from_dict(cls, payload: Dict, base_model: Type, user=None):
         # So dirty, so nasty, so sad
         return QueryWrapper(json.dumps(payload), base_model, user)
 
