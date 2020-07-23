@@ -106,7 +106,7 @@ description = "JSON declarative SQL conversion library"
 name = "duckql"
 optional = false
 python-versions = "*"
-version = "0.5.0"
+version = "0.6.0"
 
 [package.dependencies]
 click = ">=7.0.0,<8.0.0"
@@ -577,7 +577,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "1f3011df0230aba5041feed785534419ab20057b6786afdda84afdb4c673614c"
+content-hash = "b88a356684998c5219b70e5246e08ea42873ea8e5f25568a8fbc39e0812714c2"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -650,8 +650,8 @@ django-enum-choices = [
     {file = "django_enum_choices-2.1.2.tar.gz", hash = "sha256:191eea8940d7101601bc41ffa269aa41c75439da9174ecc8a209410080fbeba4"},
 ]
 duckql = [
-    {file = "duckql-0.5.0-py3-none-any.whl", hash = "sha256:cf7f29a5fdad43c0af232de97bfccc1aad53d0850c02115b21e3d456299233ef"},
-    {file = "duckql-0.5.0.tar.gz", hash = "sha256:f62c67a31fb5d8667325ad8f51a8da0653b846b0abd6fd8ebb2ec5a7afe0e7db"},
+    {file = "duckql-0.6.0-py3-none-any.whl", hash = "sha256:10ad55a507509cdd308bce307940ed53681c31b709e322c0c74cd4760c64a531"},
+    {file = "duckql-0.6.0.tar.gz", hash = "sha256:79b296a4261db8499514beae8f5e108190d2eb13f9910cff35404ba7c0d08b5d"},
 ]
 flake8 = [
     {file = "flake8-3.8.3-py2.py3-none-any.whl", hash = "sha256:15e351d19611c887e482fb960eae4d44845013cc142d42896e9862f775d8cf5c"},
