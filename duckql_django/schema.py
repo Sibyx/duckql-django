@@ -162,7 +162,7 @@ class Schema:
                         }
 
                         if field.attname in conf.metadata.keys():
-                            field_definition = {**conf.metadata[field.attname], **field_definition}
+                            field_definition['metadata'] = conf.metadata[field.attname]
 
                         if field.__class__.__name__ not in types:
                             types.append(field.__class__.__name__)

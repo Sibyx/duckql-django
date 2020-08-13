@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 : 2020-08-13
+
+- **Change**: Moved metadata to according field without merge
+
 ## 0.4.1 : 2020-08-13
 
 - **Change**: Moved metadata to according field
