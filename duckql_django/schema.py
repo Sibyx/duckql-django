@@ -145,8 +145,11 @@ class Schema:
                 entity = {
                     'fields': [],
                     'relations': [],
-                    'title': model_meta.verbose_name_plural
+                    'title': model_meta.verbose_name_plural,
                 }
+
+                if conf.metadata:
+                    entity['metadata'] = conf.metadata
 
                 for field in model_meta.fields:
                     if not conf.fields or field.attname in model_meta.fields:

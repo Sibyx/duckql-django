@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0 : 2020-08-13
+
+- **Feature**: Field metadata in schema
+- **Feature** Initial formatters support
+
 ## 0.3.3 : 2020-08-04
 
 - **Change**: Upgrade to `duckql-python` 0.6.1 (Python 3.8 compatibility)

@@ -11,6 +11,8 @@ class BaseReportConfig(object):
     ]
     permission: Union[str, None] = None
     field_permissions: Dict[str, Union[str, Callable]] = {}
+    formatters: Dict[str, Callable] = {}
+    metadata: Dict = {}
 
 
 __all__ = [
