@@ -148,9 +148,6 @@ class Schema:
                     'title': model_meta.verbose_name_plural,
                 }
 
-                if conf.metadata:
-                    entity['metadata'] = conf.metadata
-
                 for field in model_meta.fields:
                     if not conf.fields or field.attname in model_meta.fields:
 
@@ -163,6 +160,9 @@ class Schema:
                             'type': field.__class__.__name__,
                             'title': field.verbose_name
                         }
+
+                        if field.attname in conf.metadata.keys():
+                            field_definition = {**conf.metadata[field.attname], **field_definition}
 
                         if field.__class__.__name__ not in types:
                             types.append(field.__class__.__name__)

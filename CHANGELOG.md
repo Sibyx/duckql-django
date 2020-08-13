@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 : 2020-08-13
+
+- **Change**: Moved metadata to according field
+
 ## 0.4.0 : 2020-08-13
 
 - **Feature**: Field metadata in schema
