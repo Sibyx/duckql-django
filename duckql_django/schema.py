@@ -122,12 +122,12 @@ class Schema:
         if field.attname not in conf.field_permissions.keys():
             return True
 
-        rule = conf.field_permissions[field]
+        rule = conf.field_permissions[field.attname]
 
         if isinstance(rule, Callable):
             return rule(self._user)
         elif isinstance(rule, str):
-            return self._user.has_perm(conf.field_permissions[field])
+            return self._user.has_perm(rule)
 
         return False
 

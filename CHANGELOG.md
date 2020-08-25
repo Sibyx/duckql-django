@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1 : 2020-08-25
+
+- **Fix**: Fixed key error in schema permission checking
+
 ## 0.6.0 : 2020-08-25
 
 - **Feature**: Callable permission checker for entity
