@@ -119,7 +119,7 @@ class Schema:
         if not self._user:
             return True
 
-        if field not in conf.field_permissions.keys():
+        if field.attname not in conf.field_permissions.keys():
             return True
 
         rule = conf.field_permissions[field]
@@ -143,8 +143,11 @@ class Schema:
                     continue
 
                 # TODO: create handle for custom permission checker
-                if self._user and conf.permission and not self._user.has_perm(conf.permission):
-                    continue
+                if self._user and conf.permission:
+                    if isinstance(conf.permission, str) and not self._user.has_perm(conf.permission):
+                        continue
+                    if isinstance(conf.permission, Callable) and not conf.permission(self._user):
+                        continue
 
                 model_meta = getattr(model, '_meta')
                 entity = {

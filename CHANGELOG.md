@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0 : 2020-08-25
+
+- **Feature**: Callable permission checker for entity
+- **Fix**: `Schema._check_permissions_for_field` is not always returning True now
+
 ## 0.5.0 : 2020-08-25
 
 - **Feature**: Callable permission checkers for fields
