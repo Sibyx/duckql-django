@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 : 2020-08-25
+
+- **Feature**: Callable permission checkers for fields
+
 ## 0.4.2 : 2020-08-13
 
 - **Change**: Moved metadata to according field without merge

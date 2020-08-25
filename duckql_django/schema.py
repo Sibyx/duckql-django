@@ -1,4 +1,4 @@
-from typing import Tuple, Dict, List, Type
+from typing import Tuple, Dict, List, Type, Callable
 
 from django.db.models import UUIDField, CharField, TextField, BigIntegerField, PositiveIntegerField, DecimalField, \
     IntegerField, DateTimeField, DateField, ForeignKey
@@ -122,9 +122,14 @@ class Schema:
         if field not in conf.field_permissions.keys():
             return True
 
-        # TODO: support for callable in field permissions
+        rule = conf.field_permissions[field]
 
-        return self._user.has_perm(conf.field_permissions[field])
+        if isinstance(rule, Callable):
+            return rule(self._user)
+        elif isinstance(rule, str):
+            return self._user.has_perm(conf.field_permissions[field])
+
+        return False
 
     def _create_mapping(self) -> Tuple[Dict, List[str]]:
         mapping = {}
