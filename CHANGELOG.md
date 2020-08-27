@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.2 : 2020-08-27
+
+- **Change**: Upgrade to `duckql-python` 0.7.1
+
 ## 0.6.1 : 2020-08-25
 
 - **Fix**: Fixed key error in schema permission checking
