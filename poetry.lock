@@ -105,7 +105,7 @@ description = "JSON declarative SQL conversion library"
 name = "duckql"
 optional = false
 python-versions = "*"
-version = "0.6.1"
+version = "0.7.1"
 
 [package.dependencies]
 click = ">=7.0.0,<8.0.0"
@@ -269,7 +269,7 @@ description = "A Material Design theme for MkDocs"
 name = "mkdocs-material"
 optional = false
 python-versions = "*"
-version = "5.5.8"
+version = "5.5.9"
 
 [package.dependencies]
 Pygments = ">=2.4"
@@ -576,7 +576,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "ae63780490feaf0613b95c820dabf6cee9808bbf5383436692837a8dc1324455"
+content-hash = "ff38edc66e1647a34ba64738eb69f3ed732099dbf40e597e050fe08275e22561"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -649,8 +649,8 @@ django-enum-choices = [
     {file = "django_enum_choices-2.1.2.tar.gz", hash = "sha256:191eea8940d7101601bc41ffa269aa41c75439da9174ecc8a209410080fbeba4"},
 ]
 duckql = [
-    {file = "duckql-0.6.1-py3-none-any.whl", hash = "sha256:cef085ab28ab90e767677a1b6a51e0aa10f3e22d4de0937a4ff33ac43084afe8"},
-    {file = "duckql-0.6.1.tar.gz", hash = "sha256:575e478ee3ec1f6547022abec9f9a6f216bd32ccb314b00b7284760ba9ad84b9"},
+    {file = "duckql-0.7.1-py3-none-any.whl", hash = "sha256:561d1a391f1483d5b70f1acfe17ca8e6aa565b077724f60c540087000d4a6971"},
+    {file = "duckql-0.7.1.tar.gz", hash = "sha256:31e4a756022c06278757102ee58601879f2e914ab067e47e7d1b7870fa0641e9"},
 ]
 flake8 = [
     {file = "flake8-3.8.3-py2.py3-none-any.whl", hash = "sha256:15e351d19611c887e482fb960eae4d44845013cc142d42896e9862f775d8cf5c"},
@@ -726,8 +726,8 @@ mkdocs = [
     {file = "mkdocs-1.1.2.tar.gz", hash = "sha256:f0b61e5402b99d7789efa032c7a74c90a20220a9c81749da06dbfbcbd52ffb39"},
 ]
 mkdocs-material = [
-    {file = "mkdocs-material-5.5.8.tar.gz", hash = "sha256:70aeb8ba818656ac67868addd8c0a869a3b06a68b8821ac3996d9a0418e3a94c"},
-    {file = "mkdocs_material-5.5.8-py2.py3-none-any.whl", hash = "sha256:4184ffda4351dd198b83357acab9468cd64384c544452b01d9a310ac4e771f8c"},
+    {file = "mkdocs-material-5.5.9.tar.gz", hash = "sha256:37d60947993b939318945c170c7b3a153646976badf57648fd70befc3b54c830"},
+    {file = "mkdocs_material-5.5.9-py2.py3-none-any.whl", hash = "sha256:c8cb3c8c44bf10ed7ac1eb568d93a4346efe03fee2994b6a80e96559421cec49"},
 ]
 mkdocs-material-extensions = [
     {file = "mkdocs-material-extensions-1.0.tar.gz", hash = "sha256:17d7491e189af75700310b7ec33c6c48a22060b8b445001deca040cb60471cde"},
