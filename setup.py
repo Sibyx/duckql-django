@@ -21,7 +21,7 @@ setup(
     ],
     install_requires=[
         'django>=2',
-        'duckql>=0.8.1',
+        'duckql>=0.8.2',
         'django-enum-choices>=2.1.2'
     ],
     url='https://github.com/Sibyx/duckql-django',

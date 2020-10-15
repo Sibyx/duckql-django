@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.6 : 2020-10-15
+
+- **Change**: Upgrade to `duckql-python` 0.8.1
+
 ## 0.6.5 : 2020-10-15
 
 - **Change**: Upgrade to `duckql-python` 0.8.1
