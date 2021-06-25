@@ -3,13 +3,15 @@ import json
 from typing import Dict, List, Type
 
 from django.db import connection
-from duckql import Query, Count, Constant
+from duckql import Query, Count, Constant, Operator
 
 from . import Schema
 
 
 class QueryWrapper:
     def __init__(self, query: str, base_model: Type, user=None):
+        Query.update_forward_refs()
+        Operator.update_forward_refs()
         self._query = Query.parse_raw(query)
         self._schema = Schema(base_model, user)
 

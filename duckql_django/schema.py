@@ -3,7 +3,7 @@ from typing import Tuple, Dict, List, Type, Callable
 from django.db.models import UUIDField, CharField, TextField, BigIntegerField, PositiveIntegerField, DecimalField, \
     IntegerField, DateTimeField, DateField, ForeignKey
 from django_enum_choices.fields import EnumChoiceField
-from duckql import Query
+from duckql import Query, Operator
 
 from duckql_django import BaseReportConfig
 
@@ -211,6 +211,7 @@ class Schema:
     @property
     def json_schema(self) -> Dict:
         Query.update_forward_refs()
+        Operator.update_forward_refs()
         return Query.schema()
 
     @property

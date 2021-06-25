@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0 : 2021-06-25
+
+- **Change**: Upgrade to `duckql-python` 0.9.0
+- **Change**: `update_forward_refs`
+
 ## 0.6.6 : 2020-10-15
 
 - **Change**: Upgrade to `duckql-python` 0.8.2
