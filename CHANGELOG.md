@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.1 : 2021-07-20
+
+- **Change**: Upgrade to `duckql-python` 0.9.1
+
 ## 0.7.0 : 2021-06-25
 
 - **Change**: Upgrade to `duckql-python` 0.9.0
