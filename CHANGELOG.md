@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.2 : 2021-10-26
+
+- **Fix**: `DateTime` fields has `functions.Max` aggregation by default
+
 ## 0.7.1 : 2021-07-20
 
 - **Change**: Upgrade to `duckql-python` 0.9.1

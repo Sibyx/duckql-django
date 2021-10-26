@@ -95,7 +95,7 @@ class Schema:
                 'functions.Weekday',
                 'functions.Count'
             ],
-            'default': 'functions.Count'
+            'default': 'functions.Max'
         }
     }
 
