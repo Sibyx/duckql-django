@@ -188,8 +188,8 @@ class Schema:
                                 'entity': field.related_model._meta.db_table
                             }
 
-                            if field.attname in conf.joins:
-                                relation['join'] = conf.joins[field.attname].value
+                            if field.related_model._meta.db_table in conf.joins:
+                                relation['join'] = conf.joins[field.related_model._meta.db_table].value
 
                             entity['relations'].append(relation)
 
@@ -204,8 +204,8 @@ class Schema:
                             'entity': field.related_model._meta.db_table
                         }
 
-                        if field.attname in conf.joins:
-                            definition['join'] = conf.joins[field.field_name].value
+                        if field.related_model._meta.db_table in conf.joins:
+                            definition['join'] = conf.joins[field.related_model._meta.db_table].value
 
                         entity['relations'].append(definition)
 

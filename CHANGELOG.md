@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1 : 2022-06-07
+
+- **Fixed**: Fixed JOIN type types (mapping using entity name instead of properties)
+
 ## 0.8.0 : 2022-06-07
 
 - **Added**: Possibility to specify JOIN type
