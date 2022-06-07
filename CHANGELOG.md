@@ -2,7 +2,7 @@
 
 ## 0.8.0 : 2022-06-07
 
-- **Added**: Possibility to specify
+- **Added**: Possibility to specify JOIN type
 
 ## 0.7.2 : 2021-10-26
 
