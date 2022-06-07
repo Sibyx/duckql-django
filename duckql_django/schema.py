@@ -182,11 +182,16 @@ class Schema:
                             field_definition['values'] = {item.value: str(item) for item in field.enum_class}
 
                         if isinstance(field, ForeignKey):
-                            entity['relations'].append({
+                            relation = {
                                 'local': field.column,
                                 'foreign': field.target_field.column,
                                 'entity': field.related_model._meta.db_table
-                            })
+                            }
+
+                            if field.attname in conf.joins:
+                                relation['join'] = conf.joins[field.attname].value
+
+                            entity['relations'].append(relation)
 
                         if field.attname not in conf.exclude:
                             entity['fields'].append(field_definition)
@@ -198,6 +203,9 @@ class Schema:
                             'foreign': field.remote_field.column,
                             'entity': field.related_model._meta.db_table
                         }
+
+                        if field.attname in conf.joins:
+                            definition['join'] = conf.joins[field.field_name].value
 
                         entity['relations'].append(definition)
 

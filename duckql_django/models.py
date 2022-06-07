@@ -1,5 +1,7 @@
 from typing import List, Union, Dict, Callable
 
+from duckql import Join
+
 
 class BaseReportConfig(object):
     is_reportable: bool = False
@@ -13,6 +15,7 @@ class BaseReportConfig(object):
     field_permissions: Dict[str, Union[str, Callable]] = {}
     formatters: Dict[str, Callable] = {}
     metadata: Dict = {}
+    joins: Dict[str, Join.Type] = {}
 
 
 __all__ = [
