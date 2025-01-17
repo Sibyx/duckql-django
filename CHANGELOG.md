@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0 : 2025-01-17
+
+- **Changed**: Upgrade to `duckql-python` 0.14.0
+
 ## 0.8.1 : 2022-06-07
 
 - **Fixed**: Fixed JOIN type types (mapping using entity name instead of properties)
